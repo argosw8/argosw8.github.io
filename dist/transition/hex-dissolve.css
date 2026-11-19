@@ -1,0 +1,8 @@
+/* Only the transient text overlay is styled; the portfolio keeps its own fonts. */
+.hex-dissolve-mask { color: transparent !important; text-shadow: none !important; }
+.hex-dissolve-canvas { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 20; pointer-events: none; }
+::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+@media (prefers-reduced-motion: reduce) {
+  .hex-dissolve-canvas { display: none; }
+  .hex-dissolve-mask { color: inherit !important; }
+}
